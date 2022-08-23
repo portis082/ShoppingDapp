@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.15;
 
-contract User {
+contract Shopping {
     uint userCount = 0;
     uint productCount = 0;
 
