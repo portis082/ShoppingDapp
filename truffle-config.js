@@ -1,3 +1,4 @@
+require("dotenv").config();
 /**
  * Use this file to configure your truffle project. It's seeded with some
  * common settings for different networks and features like migrations,
@@ -35,22 +36,17 @@ module.exports = {
    */
 
   networks: {
-    localnetwork: {        // 네트워크 이름 development -> localnw (local networld 줄임)
-      host: "127.0.0.1",     // ganache host
-      port: 7545,            // ganache port
-      network_id: "5777",       // ganache network id
-    }
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
     // You should run a client (like ganache, geth, or parity) in a separate terminal
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
     //
-    // development: {
-    //  host: "127.0.0.1",     // Localhost (default: none)
-    //  port: 8545,            // Standard Ethereum port (default: none)
-    //  network_id: "*",       // Any network (default: none)
-    // },
+    development: {
+      host: process.env.HOST,     // Localhost (default: none)
+      port: process.env.GANACHEPORT,            // Standard Ethereum port (default: none)
+      network_id: process.env.NETWORKID,       // Any network (default: none)
+    },
     //
     // An additional network, but with some advanced options…
     // advanced: {
