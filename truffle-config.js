@@ -35,7 +35,7 @@ module.exports = {
    */
 
   networks: {
-    localnw: {        // 네트워크 이름 development -> localnw (local networld 줄임)
+    localnetwork: {        // 네트워크 이름 development -> localnw (local networld 줄임)
       host: "127.0.0.1",     // ganache host
       port: 7545,            // ganache port
       network_id: "5777",       // ganache network id
