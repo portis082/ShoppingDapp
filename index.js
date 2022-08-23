@@ -21,5 +21,5 @@ app.use(
 app.use("/", indexRouter);
 
 app.listen(PORT, () => {
-    console.log(`server listening at http://localhost:${PORT}`);
+    console.log(`server listening at http://127.0.0.1:${PORT}`);
 });
