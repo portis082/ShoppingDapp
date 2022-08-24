@@ -14,10 +14,10 @@ HOST=
 GANACHEPORT=
 NETWORKID=
 ```
-ADDRESS : 0번째 address
-HOST : Ganache 호스트
-GANACHEPORT : Ganache 포트
-NETWORKID : Ganache network ID
+- ADDRESS : 0번째 address
+- HOST : Ganache 호스트
+- GANACHEPORT : Ganache 포트
+- NETWORKID : Ganache network ID
 
 ## 명령어
 
@@ -27,25 +27,25 @@ NETWORKID : Ganache network ID
 
 # Api 문서
 
-UserInfo : [ id, name, cash, point ]
+- UserInfo : [ id, name, cash, point ]
 
-ProductInfo : [ id, name, price, quantity, rate, owner ]
+- ProductInfo : [ id, name, price, quantity, rate, owner ]
 
-OrderInfo [ id, userId, totalPrice, totalPoint, accumulation, [[ product IDs, ... ], [ amounts, ...]] ]
+- OrderInfo [ id, userId, totalPrice, totalPoint, accumulation, [[ product IDs, ... ], [ amounts, ...]] ]
 
 ## Product
 
 ### get     /product
-request : -
-response : [ProductInfo, ...]
+- request : -
+- response : [ProductInfo, ...]
 
 ### get     /product/:id
-param : id
-request : -
-response : [ ProductInfo ]
+- param : id
+- request : -
+- response : [ ProductInfo ]
 
 ### post    /product
-request :
+- request :
 {
     name : string,
     price : number,
@@ -53,36 +53,36 @@ request :
     rate : number(%),
     owner : string
 }
-response : { ProductInfo }
+- response : { ProductInfo }
 
 ## User
 
 ### get     /user
-request : -
-response : { ProductInfo }
+- request : -
+- response : { ProductInfo }
 
 ### get     /user/:id
-param : id
-request : -
-response : { ProductInfo }
+- param : id
+- request : -
+- response : { ProductInfo }
 
 ### post    /user
-request :
+- request :
 {
     name : string,
     cash : number,
     point : number
 }
-response : { ProductInfo }
+- response : { ProductInfo }
 
 ## Order
 
 ### get     /order
-request : -
-response : [ OrderInfo, ... ]
+- request : -
+- response : [ OrderInfo, ... ]
 
 ### post    /order/cash
-request :
+- request :
 {
     userId : number,
     items : array
@@ -93,10 +93,10 @@ request :
         }
     ]
 }
-response : { OrderInfo }
+- response : { OrderInfo }
 
 ### post    /order/point
-request :
+- request :
 {
     userId : number,
     items : array
@@ -107,4 +107,4 @@ request :
         }
     ]
 }
-response : { OrderInfo }
+- response : { OrderInfo }
