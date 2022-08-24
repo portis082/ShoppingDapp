@@ -31,11 +31,6 @@ contract Shopping {
         uint[][] items;
     }
 
-    struct Items {
-        uint productId;
-        uint amount;
-    }
-
     event productEvent(uint256 _id, string _name, uint256 _price, uint256 _quantity, uint256 _rate, string _owner);
     event userEvent(uint256 _id, string _name, uint256 _cash, uint256 _point);
     event orderEvent(uint _id, uint _userId, uint _totalPrice, uint _totalPoint, uint _accumulation,  uint[][] _items);
