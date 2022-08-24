@@ -5,6 +5,7 @@ dist-ssr
 package-lock.json
 .env
 test
+build
 
 # Editor directories and files
 .vscode/*
