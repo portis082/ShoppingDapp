@@ -90,7 +90,7 @@ NETWORKID=
         {
             productId: number,
             amount: number
-        }
+        }, ...
     ]
 }
 - response : { OrderInfo }
@@ -104,7 +104,7 @@ NETWORKID=
         {
             productId: number,
             amount: number
-        }
+        }, ...
     ]
 }
 - response : { OrderInfo }
